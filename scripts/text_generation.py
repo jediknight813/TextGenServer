@@ -7,7 +7,7 @@ load_dotenv()
 
 # get the api key and set the model.
 api_key = os.environ.get('OPENAI_API_KEY')
-local_api_url = os.environ.get('OPENAI_API_KEY')
+local_api_url = os.environ.get('LOCAL_API_URL')
 openai.api_key = api_key
 
 # check if it should use local text generation.
