@@ -1,0 +1,6 @@
+.env
+__pycache__
+images/*
+.DS_Store
+.venv
+!images/images_go_here.txt
