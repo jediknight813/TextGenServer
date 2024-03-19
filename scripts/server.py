@@ -9,9 +9,8 @@ async def generate_text():
     data = request.get_json()
     messages = data.get('messages', [])
     scenario = data.get('scenario', '')
-    # print(messages, scenario)
-
-    response = await generate_response(messages, scenario)
+    players = data.get('players', [])
+    response = await generate_response(messages, scenario, players)
     return jsonify({"response": response.strip()})
 
 
@@ -21,8 +20,6 @@ async def generate_background_image():
     messages = data.get('messages', [])
     scenario = data.get('scenario', '')
     style = data.get('style', '')
-    print(messages, scenario, style)
-
     image_prompt = await generate_background_image_prompt(messages, scenario, style)
     response = await create_image(image_prompt.strip())
     return jsonify({"response": str(response)})
