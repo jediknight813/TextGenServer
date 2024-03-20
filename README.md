@@ -22,3 +22,5 @@ pip install -r requirements.txt
 ```
 python scripts/server.py
 ```
+* run the client
+https://github.com/jediknight813/TextGenClient
